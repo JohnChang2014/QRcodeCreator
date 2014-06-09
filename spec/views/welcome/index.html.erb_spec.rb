@@ -9,7 +9,10 @@ describe "welcome/index.html.erb" do
 	end
 	
 	context 'render message form' do
-		it "has a title of 'Please enter any message for your QR code below:' above a form"
+		it "has a title of 'Please enter any message for your QR code below:' above a form" do
+			render
+			expect(rendered).to have_content('Please enter any message for your QR code below:')
+		end
 		it "has a form for users to enter any message"
 	end
 end
