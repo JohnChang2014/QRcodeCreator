@@ -2,5 +2,5 @@
 <p>Please enter any message for your QR code below:</p>
 <%= form_tag qrcodes_path do %>
     <%= text_field_tag 'message', nil, :placeholder => 'Enter message here.' %>
-    <%= submit_tag %>
+    <%= submit_tag 'submit' %>
 <% end %>

@@ -18,7 +18,7 @@ describe "welcome/index.html.erb" do
 			render
 			expect(rendered).to have_selector('form')
 			expect(rendered).to have_selector('form input[type=text][name=message][placeholder="Enter message here."]')
-			expect(rendered).to have_selector('form input[type="submit"]')
+			expect(rendered).to have_selector('form input[type="submit"][value=submit]')
 		end
 	end
 end
