@@ -11,8 +11,5 @@ Then(/^the page should have a text title of "(.*?)"$/) do |arg1|
 end
 
 Then(/^the page should have a form for users to enter any message$/) do
-	expect(page).to have_selector('form', :method => 'POST', :action => qrcodes_path) do |form|
-		expect(form).to have_selector('input', :type => 'text', :placeholder => 'Enter message here.')
-		expect(form).to have_selector('input', :type => 'submit')
-	end
+	expect(page).to have_selector('form')
 end

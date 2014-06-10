@@ -38,7 +38,6 @@ group :development, :test do
 end
 
 group :test do
-	#gem 'webrat', ">= 0.7.2"
 	gem 'database_cleaner'
 end
 
