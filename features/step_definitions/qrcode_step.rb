@@ -1,10 +1,10 @@
-When(/^a funny message is entered$/) do
+When(/^a funny message "(.*?)" is entered$/) do |message|
 	visit root_path
-	fill_in 'message', with: 'hello'
+	fill_in 'message', with: message
 end
 
-When(/^qrcode\-user hit the button submit$/) do
-	click_button 'submit'
+When(/^qrcode\-user hit the button "(.*?)"$/) do |submit|
+	click_button submit
 end
 
 Then(/^the page should show the result qrcode on the screen$/) do
