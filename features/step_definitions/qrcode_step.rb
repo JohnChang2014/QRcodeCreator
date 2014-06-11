@@ -1,12 +1,16 @@
-When(/^a funny message "(.*?)" is entered$/) do |message|
+Given(/^I am at the welcome page$/) do
 	visit root_path
-	fill_in 'message', with: message
 end
 
-When(/^qrcode\-user hit the button "(.*?)"$/) do |submit|
+Given(/^I fill in "(.*?)" with "(.*?)"$/) do |field, text|
+	fill_in field, with: text
+end
+
+When(/^I hit the button "(.*?)"$/) do |submit|
 	click_button submit
 end
 
 Then(/^the page should show the result qrcode on the screen$/) do
-	pending # express the regexp above with the code you wish you had
+	expect(page).to have_selector 'img'
 end
+

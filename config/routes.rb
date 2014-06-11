@@ -1,5 +1,4 @@
 QRcodeCreator::Application.routes.draw do
-  get "qrcodes/create"
 	root 'welcome#index'
 	
 	resources :qrcodes, :only => :create
