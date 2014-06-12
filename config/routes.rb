@@ -1,7 +1,7 @@
 QRcodeCreator::Application.routes.draw do
 	root 'welcome#index'
 	
-	resources :qrcodes, :only => :create
+	resources :qrcodes, :only => :create, :defaults => { :format => 'png' }
 	
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

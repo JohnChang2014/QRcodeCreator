@@ -41,6 +41,9 @@ group :test do
 	gem 'database_cleaner'
 end
 
+gem 'mini_magick'
+gem 'custom_rqrcode'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

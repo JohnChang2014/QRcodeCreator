@@ -2,17 +2,16 @@ require 'spec_helper'
 
 describe QrcodesController do
 	describe "POST 'create'" do
-		it "returns http success" do
-			post 'create'
-			expect(response).to be_success
-		end
-
-		it "renders QR code image in the response" do
-			post 'create'
-			cqrcode = RQRCode::CQRCode.new
-			options = { :info => "hello" }
-			data    = cqrcode.generateQRcode(options, :png)
-			expect(response.body).to eq data
+		context 'with parameters of message and format' do
+			it "returns HTTP status 200" do
+				post 'create', message: 'hello', format: 'png'
+				expect(response.status).to eq(200)
+			end
+			
+			it "returns image/png in the content-type of header" do
+				post 'create', message: 'hello', format: 'png'
+				expect(response.header["Content-Type"]).to include 'image/png'
+			end
 		end
 	end
 end
