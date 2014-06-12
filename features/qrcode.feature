@@ -8,4 +8,3 @@ Feature: QR code
     And I fill in "message" with "hello"
     When I hit the button "submit"
     Then the page should show the result qrcode on the screen
-    And the page should say "Your QR code is created successfully."

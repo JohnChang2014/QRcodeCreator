@@ -11,6 +11,6 @@ When(/^I hit the button "(.*?)"$/) do |submit|
 end
 
 Then(/^the page should show the result qrcode on the screen$/) do
-	expect(page).to have_selector 'img'
+	page.has_css? 'img'
 end
 
